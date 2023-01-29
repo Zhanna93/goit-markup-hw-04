@@ -21,23 +21,23 @@
 /* Скрытие заголовка */
 .visually-hidden {
   position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
+  border: 0;
   white-space: nowrap;
   clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 /* Index */
 
 body {
   color: var(--color-basik-txt);
-  font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
@@ -60,10 +60,10 @@ img {
 
 .container {
   width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 
   /* outline: 2px solid red; */
 }
@@ -150,9 +150,9 @@ img {
   margin-right: 76px;
 
   color: var(--color-blue-txt);
-  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
+  font-family: 'Raleway', sans-serif;
   line-height: 1.3;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -169,8 +169,8 @@ img {
   width: 494px;
   margin-top: 0;
   margin-right: auto;
-  margin-left: auto;
   margin-bottom: 48px;
+  margin-left: auto;
 
   color: var(--color-light-txt);
   font-size: 56px;
@@ -180,35 +180,36 @@ img {
 
 .hero {
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
-  /* max-width: 1440px; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .hero,
 .footer {
-  background-color: var(--color-dark-bgr);
   padding-top: 188px;
   padding-bottom: 188px;
+  background-color: var(--color-dark-bgr);
 }
 
 .btn {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 4px;
-  padding: 16px 32px;
   min-width: 169px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 16px 32px;
   border: 0;
+  border-radius: 4px;
+  background-color: var(--color-btn-bgr);
 
   color: var(--color-light-txt);
-  background-color: var(--color-btn-bgr);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   cursor: pointer;
 }
@@ -220,13 +221,15 @@ img {
 
 /* Our advantages */
 
-.benefits-icon {
-  width: 264px;
-  height: 112px;
-  padding: 24px 100px;
-  margin-bottom: 8px;
-  background-color: var(--color-team-bgr);
-  border-radius: 4px;
+.benefits-wrapper {
+ display: flex;
+ width: 264px;
+ height: 112px;
+ border-radius: 4px;
+ background-color: var(--color-team-bgr);
+ margin-bottom: 8px;
+ justify-content: center;
+ align-items: center;
 }
 
 .benefits-list {
@@ -249,13 +252,13 @@ img {
 
 .team-list {
   display: flex;
-  justify-content: center;
   gap: 24px;
+  justify-content: center;
 }
 
 .team-item {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team-card {
@@ -283,7 +286,8 @@ img {
 
 .team-link {
   display: flex;
-  padding: 12px 12px;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -301,18 +305,23 @@ img {
 
 .customers-list {
   display: flex;
-  justify-content: center;
   gap: 24px;
+  justify-content: center;
 }
 
+.customers-item {
+ width: 168px;
+}
 .customers-link {
   display: flex;
-  
-  width: 168px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
   height: 88px;
   border: 1px solid var(--color-icons-bgr);
   border-radius: 4px;
-  padding: 16px 32px;
+  fill: var(--color-icons-bgr);
 }
 
 .customers-link:hover,
@@ -320,12 +329,8 @@ img {
   border: 1px solid var(--color-btnhover-bgr);
 }
 
-.customers-icon {
-  fill: var(--color-icons-bgr);
-}
-
-.customers-icon:hover,
-.customers-icon:focus {
+.customers-link:hover,
+.customers-link:focus {
   fill: var(--color-btnhover-bgr);
 }
 
@@ -350,11 +355,11 @@ img {
 .text-footer {
   width: 264px;
   margin-top: 16px;
-  margin-bottom: 0;
   margin-right: 0;
+  margin-bottom: 0;
+  background-color: var(--color-dark-bgr);
 
   color: var(--color-footer-txt);
-  background-color: var(--color-dark-bgr);
 }
 
 .footer-logo-light {
@@ -363,20 +368,21 @@ img {
 
 .footer-media {
   display: block;
-  font-weight: 500;
-  color: var(--color-light-txt);
   margin-bottom: 16px;
+  color: var(--color-light-txt);
+  font-weight: 500;
 }
 
 .footer-list {
   display: flex;
-  justify-content: center;
   gap: 16px;
+  justify-content: center;
 }
 
 .footer-link {
   display: flex;
-  padding: 8px 8px;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -401,24 +407,24 @@ img {
 
 .btn-list {
   display: flex;
-  margin-bottom: 72px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-bottom: 72px;
 }
 
 .portfolio-btn {
   padding: 12px 24px;
-
-  color: var(--color-blue-txt);
-  background-color: var(--color-light-bgr);
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
   border: 1px solid var(--color-light-bgr);
   border-radius: 4px;
+  background-color: var(--color-light-bgr);
+
+  color: var(--color-blue-txt);
+  font-weight: 500;
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 
   cursor: pointer;
 }
@@ -429,8 +435,8 @@ img {
 
 .portfolio-btn:hover,
 .portfolio-btn:focus {
-  color: var(--color-light-txt);
   background-color: var(--color-btnhover-bgr);
+  color: var(--color-light-txt);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -443,9 +449,9 @@ img {
 
 .portfolio-wrapper {
   padding-top: 32px;
+  padding-right: 54px;
   padding-bottom: 32px;
   padding-left: 16px;
-  padding-right: 54px;
   border: 1px solid var(--color-light-bgr);
   border-top: 0;
 }
