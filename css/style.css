@@ -466,7 +466,7 @@ img {
 }
 
 .text {
-  margin: 0;
+  margin: auto;
 
   color: var(--color-basik-txt);
 }
