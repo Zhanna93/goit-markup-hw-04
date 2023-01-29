@@ -12,7 +12,10 @@
 --color-light-bgr: rgba(231, 233, 252, 1);
 --color-team-bgr: rgba(244, 244, 253, 1);
 --color-btn-bgr: rgba(77, 90, 229, 1);
---color-btnhover-bgr: rgba(64, 75, 191, 1)
+--color-btnhover-bgr: rgba(64, 75, 191, 1);
+--color-icons-bgr: rgb(142, 143, 153);
+--color-icon-bgr: rgba(255, 255, 255, 0.1);
+--color-accent-bgr: rgb(49, 208, 170);
 }
 
 /* Скрытие заголовка */
@@ -175,6 +178,13 @@ img {
   text-align: center;
 }
 
+.hero {
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* max-width: 1440px; */
+}
 .hero,
 .footer {
   background-color: var(--color-dark-bgr);
@@ -210,6 +220,15 @@ img {
 
 /* Our advantages */
 
+.benefits-icon {
+  width: 264px;
+  height: 112px;
+  padding: 24px 100px;
+  margin-bottom: 8px;
+  background-color: var(--color-team-bgr);
+  border-radius: 4px;
+}
+
 .benefits-list {
   display: flex;
   gap: 24px;
@@ -230,7 +249,8 @@ img {
 
 .team-list {
   display: flex;
-  gap: 32px;
+  justify-content: center;
+  gap: 24px;
 }
 
 .team-item {
@@ -249,6 +269,7 @@ img {
 }
 
 .team .text {
+  margin-bottom: 8px;
   background-color: var(--color-basik-bgr);
 }
 
@@ -260,6 +281,54 @@ img {
   background-color: var(--color-basik-bgr);
 }
 
+.team-link {
+  display: flex;
+  padding: 12px 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-btn-bgr);
+}
+
+.team-link:hover,
+.team-link:focus {
+  background-color: var(--color-btnhover-bgr);
+}
+.team-icon {
+  fill: var(--color-logolight-txt);
+}
+/* Customers */
+
+.customers-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.customers-link {
+  display: flex;
+  
+  width: 168px;
+  height: 88px;
+  border: 1px solid var(--color-icons-bgr);
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+
+.customers-link:hover,
+.customers-link:focus {
+  border: 1px solid var(--color-btnhover-bgr);
+}
+
+.customers-icon {
+  fill: var(--color-icons-bgr);
+}
+
+.customers-icon:hover,
+.customers-icon:focus {
+  fill: var(--color-btnhover-bgr);
+}
+
 /* Footer */
 
 .footer {
@@ -267,6 +336,13 @@ img {
   padding-bottom: 100px;
 }
 
+.footer-container {
+  display: flex;
+}
+
+.footer-logo {
+  margin-right: 120px;
+}
 .footer .logo {
   margin-right: 0;
 }
@@ -283,6 +359,37 @@ img {
 
 .footer-logo-light {
   color: var(--color-logolight-txt);
+}
+
+.footer-media {
+  display: block;
+  font-weight: 500;
+  color: var(--color-light-txt);
+  margin-bottom: 16px;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-link {
+  display: flex;
+  padding: 8px 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-icon-bgr);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  background-color: var(--color-accent-bgr);
+}
+
+.footer-icon {
+  fill: var(--color-logolight-txt);
 }
 
 /* Portfolio */
@@ -341,6 +448,15 @@ img {
   padding-right: 54px;
   border: 1px solid var(--color-light-bgr);
   border-top: 0;
+}
+
+.portfolio-link {
+  display: inline-block;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .text {
